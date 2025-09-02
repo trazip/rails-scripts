@@ -7,8 +7,8 @@ routes_content = <<-RUBY
   get "service-worker" => "pwa#service_worker"
 RUBY
 
-inject_into_file 'config/routes.rb', before: /end$/ do
-  routes_content unless File.read('config/routes.rb').include?(routes_content)
+inject_into_file 'config/routes.rb', after: /Rails\.application\.routes\.draw do/ do
+  "\n" + routes_content unless File.read('config/routes.rb').include?(routes_content)
 end
 
 # Create controller if it doesn't exist
