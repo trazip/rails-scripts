@@ -76,11 +76,11 @@ end
 
 # Download icons if they don't exist
 unless File.exist?('app/assets/images/app-icon-192.png')
-  run "curl -L https://raw.githubusercontent.com/trazip/pwa_setup/master/images/app-icon-192.png -o app/assets/images/app-icon-192.png"
+  run "curl -L https://raw.githubusercontent.com/trazip/rails-scripts/refs/heads/master/images/app-icon-192.png -o app/assets/images/app-icon-192.png"
 end
 
 unless File.exist?('app/assets/images/app-icon-512.png')
-  run "curl -L https://raw.githubusercontent.com/trazip/pwa_setup/master/images/app-icon-512.png -o app/assets/images/app-icon-512.png"
+  run "curl -L https://raw.githubusercontent.com/trazip/rails-scripts/refs/heads/master/images/app-icon-512.png -o app/assets/images/app-icon-512.png"
 end
 
 # Remove existing viewport meta tag if it exists
